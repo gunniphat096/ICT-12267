@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Comedy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffbe7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #ffcc70;
+            color: #4d2600;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .anime-list {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .anime-item {
+            background-color: #fff6e0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 600px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .anime-item:hover {
+            transform: translateY(-5px);
+        }
+        .anime-item h3 {
+            margin: 0;
+            font-size: 24px;
+            color: #d35400;
+            text-align: center;
+            font-weight: bold;
+        }
+        .anime-item p {
+            font-size: 16px;
+            text-align: center;
+            margin: 10px 0;
+            color: #555;
+            flex-grow: 1;
+        }
+        .anime-item img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .anime-item iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 10px;
+        }
+        .back-button {
+            display: block;
+            background-color: #ffa500;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            width: 200px;
+            margin: 30px auto;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #e69500;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Comedy Anime</h1>
+</header>
+
+<ul class="anime-list">
+    <li class="anime-item">
+        <h3>Gintama</h3>
+        <img src="https://th-test-11.slatic.net/p/182c23d9c4c41ad42378f2079cc04403.jpg" alt="Gintama">
+        <p>เรื่องราววุ่น ๆ ในยุคเอโดะที่ถูกรุกรานโดยเอเลี่ยน กับซามูไรสุดเพี้ยน “ซากาตะ กินโทกิ” และเพื่อนพ้องสุดเกรียน</p>
+        <iframe src="https://www.youtube.com/embed/kAtAcSOhrGc" title="Gintama Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Saiki Kusuo no Psi-nan</h3>
+        <img src="https://wiki.anime-os.com/image/2017/07/Saiki-Kusuo-no-Psi-Nan-S2.jpg" alt="The Disastrous Life of Saiki K.">
+        <p>ไซคิ เด็กชายผู้มีพลังจิตสุดเวอร์วัง แต่กลับอยากใช้ชีวิตแบบธรรมดา ซึ่งเป็นไปไม่ได้เลยเพราะเพื่อน ๆ ของเขานั้นไม่ธรรมดาสักคน</p>
+        <iframe src="https://www.youtube.com/embed/RChRfCHWsOI" title="Saiki K Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Konosuba: God's Blessing on This Wonderful World!</h3>
+        <img src="https://m.media-amazon.com/images/M/MV5BNGRjMzE3ZGQtN2QyNC00YzRlLWI1ZTgtZmI4MTJlYTZlNThkXkEyXkFqcGc@._V1_QL75_UX140_CR0,0,140,207_.jpg" alt="Konosuba">
+        <p>คาซึมะ เด็กหนุ่มที่ตายแบบสุดเฟล และได้เกิดใหม่ในโลกแฟนตาซีพร้อมเทพธิดาสุดเพี้ยน และปาร์ตี้สุดฮา</p>
+        <iframe src="https://www.youtube.com/embed/h4dX58X6ln4" title="Konosuba Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Nichijou</h3>
+        <img src="https://c.min.ms/t/d/member/c/20/20401/pagegallery/1502256270/924bd8f4.jpg" alt="Nichijou">
+        <p>ชีวิตประจำวันของกลุ่มเด็กสาวธรรมดา ๆ ที่ไม่ธรรมดา เพราะมีทั้งหุ่นยนต์ แมวพูดได้ และเหตุการณ์เหนือความคาดหมาย</p>
+        <iframe src="https://www.youtube.com/embed/53ejT195VVc" title="Nichijou Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Grand Blue</h3>
+        <img src="https://wiki.anime-os.com/image/2018/03/grand-blue-e2.jpg" alt="Grand Blue">
+        <p>ชีวิตมหาลัยกับชมรมดำน้ำสุดเพี้ยน ที่เน้นแอลกอฮอล์ เสียงหัวเราะ และมุกขำกลิ้งสุดฮา</p>
+        <iframe src="https://www.youtube.com/embed/CPhpXnfS7Oc"Grand Blue Trailer"></iframe>
+    </li>
+</ul>
+
+<a href="anime.html" class="back-button">กลับไปหน้าแรก</a>
+
+</body>
+</html>

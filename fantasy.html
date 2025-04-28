@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อนิเมะแฟนตาซี</title>
+    <style>
+        body {
+            font-family: 'Cinzel', serif; /* ฟอนต์ที่มีลักษณะคลาสสิก */
+            background-color: #1c1b29; /* พื้นหลังมืด */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2e1a47;
+            color: #f7d785; /* สีทองเพื่อให้ดูหรูหรา */
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-bottom: 4px solid #f7d785;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .anime-list {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .anime-item {
+            background-color: #3a1f60;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 650px;
+            max-width: 400px;
+            margin: 0 auto;
+            background: linear-gradient(45deg, #4b2a7f, #5f3579); /* การไล่สีที่มีความลึกลับ */
+        }
+        .anime-item:hover {
+            transform: translateY(-10px);
+        }
+        .anime-item h3 {
+            margin: 0;
+            font-size: 28px;
+            color: #f7d785;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .anime-item p {
+            font-size: 18px;
+            text-align: center;
+            margin: 10px 0;
+            color: #ccc;
+            flex-grow: 1;
+            font-style: italic;
+        }
+        .anime-item img {
+            width: 100%;
+            height: 250px;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+        .anime-item iframe {
+            width: 100%;
+            height: 280px;
+            border: none;
+            border-radius: 10px;
+        }
+        .back-button {
+            display: block;
+            background-color: #f7d785;
+            color: #3a1f60;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            width: 200px;
+            margin: 30px auto;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #f1c642;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Anime Fantasy</h1>
+</header>
+
+<ul class="anime-list">
+    <li class="anime-item">
+        <h3>Attack on Titan (Shingeki no Kyojin)</h3>
+        <img src="https://resizing.flixster.com/mFcpzy4Wi9wzoGiIzC7BqegRYxQ=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10873160_b_v8_aa.jpg" alt="Attack on Titan">
+        <p>ในโลกที่มนุษย์ต้องต่อสู้กับไททันยักษ์ที่ทำลายล้างเมือง และการค้นหาความจริงที่อยู่เบื้องหลังการโจมตีเหล่านี้</p>
+        <iframe src="https://www.youtube.com/embed/MGRm4IzK1SQ" title="Attack on Titan Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Fullmetal Alchemist: Brotherhood</h3>
+        <img src="https://m.media-amazon.com/images/M/MV5BNDczZWMyMjEtZDI0ZS00YThjLWE2MjEtNTIxNmVmZDhkNDg5XkEyXkFqcGc@._V1_.jpg" alt="Fullmetal Alchemist: Brotherhood">
+        <p>การผจญภัยของสองพี่น้องที่พยายามฟื้นคืนร่างกายที่สูญหายหลังจากการใช้ศาสตร์การแปรธาตุผิดกฎ</p>
+        <iframe src="https://www.youtube.com/embed/RNwNA1M8A94" title="Fullmetal Alchemist: Brotherhood Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Made in Abyss</h3>
+        <img src="https://storage.naiin.com/system/application/bookstore/resource/product/202408/621235/1000274788_front_XXL.jpg" alt="Made in Abyss">
+        <p>เรื่องราวของเด็กสาวผู้หนึ่งที่ตัดสินใจลงไปในหลุมอุกกาบาตที่เต็มไปด้วยสิ่งมีชีวิตและความลึกลับที่ต้องการไขความจริง</p>
+        <iframe src="https://www.youtube.com/embed/kqBNQEUI8dM" title="Made in Abyss Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>The Rising of the Shield Hero</h3>
+        <img src="https://m.media-amazon.com/images/I/81YJ8CeI7hL._AC_UF894,1000_QL80_.jpg" alt="The Rising of the Shield Hero">
+        <p>การผจญภัยของชายหนุ่มที่ถูกส่งไปยังโลกแฟนตาซีและกลายเป็นผู้ปกป้องโลกด้วยการใช้โล่เท่านั้น</p>
+        <iframe src="https://www.youtube.com/embed/rKnyi3TRznA" title="The Rising of the Shield Hero Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Re:Zero - Starting Life in Another World</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/th/3/3c/Re-Zero_kara_Hajimeru_Isekai_Seikatsu_light_novel_volume_1_cover.jpg" alt="Re:Zero - Starting Life in Another World">
+        <p>การผจญภัยของชายหนุ่มที่ถูกส่งไปยังโลกแฟนตาซีและต้องเผชิญกับความตายที่ไม่สามารถหลีกเลี่ยงได้ในแต่ละรอบเวลา</p>
+        <iframe src="https://www.youtube.com/embed/Slz_rahWp6Y" title="Re:Zero - Starting Life in Another World Trailer"></iframe>
+    </li>
+</ul>
+<a href="anime.html" class="back-button">กลับไปหน้าแรก</a>
+</body>
+</html>

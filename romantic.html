@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อนิเมะโรแมนติก</title>
+    <style>
+        body {
+            font-family: 'Cursive', sans-serif; /* ฟอนต์สไตล์อ่อนหวาน */
+            background-color: #fce4ec; /* สีพื้นหลังอ่อน ๆ */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #ff7f7f; /* สีชมพูอบอุ่น */
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid #ffbf47; /* ขอบทองเล็กๆ */
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .anime-list {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .anime-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 650px;
+            max-width: 400px;
+            margin: 0 auto;
+            border: 2px solid #ff7f7f; /* ขอบสีชมพู */
+        }
+        .anime-item:hover {
+            transform: translateY(-10px);
+        }
+        .anime-item h3 {
+            margin: 0;
+            font-size: 26px;
+            color: #ff6347;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+        .anime-item p {
+            font-size: 18px;
+            text-align: center;
+            margin: 10px 0;
+            color: #666;
+            flex-grow: 1;
+        }
+        .anime-item img {
+            width: 100%;
+            height: 220px;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .anime-item iframe {
+            width: 100%;
+            height: 270px;
+            border: none;
+            border-radius: 10px;
+        }
+        .back-button {
+            display: block;
+            background-color: #ff7f7f;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            width: 220px;
+            margin: 30px auto;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #ffbf47; /* สีทองเมื่อ hover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Anime Romantic</h1>
+</header>
+
+<ul class="anime-list">
+    <li class="anime-item">
+        <h3>Your Lie in April (Shigatsu wa Kimi no Uso)</h3>
+        <img src="https://mechanicalanimereviews.com/wp-content/uploads/2017/09/your-lie-in-april.jpeg?w=840" alt="Your Lie in April">
+        <p>เรื่องราวของหนุ่มนักเปียโนที่สูญเสียความรักในดนตรีหลังจากการจากไปของแม่ จนกระทั่งเขาได้พบกับสาวคนหนึ่งที่เปลี่ยนชีวิตเขาไปตลอดกาล</p>
+        <iframe src="https://www.youtube.com/embed/3aL0gDZtFbE" title="Your Lie in April Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Toradora!</h3>
+        <img src="https://kofplayer.files.wordpress.com/2009/05/toradora.jpg?w=400&amp;h=500" alt="Toradora!">
+        <p>เรื่องราวของเด็กมัธยมที่มีนิสัยดุและสาวที่มีนิสัยขี้โวยวาย ทั้งคู่พยายามช่วยกันกับเรื่องราวความรักและความสัมพันธ์ในชีวิตประจำวัน</p>
+        <iframe src="https://www.youtube.com/embed/ya570uUgQNc" title="Toradora! Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Clannad</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/th/c/cb/Clannad_game_cover.jpg" alt="Clannad">
+        <p>เรื่องราวของหนุ่มคนหนึ่งที่พบกับสาว ๆ หลายคนที่ต่างมีปัญหาชีวิต และการช่วยเหลือเหล่านี้นำไปสู่การค้นหาความรักที่แท้จริง</p>
+        <iframe src="https://www.youtube.com/embed/IecYMqp1N4k" title="Clannad Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>Fruits Basket</h3>
+        <img src="https://www.anime-os.com/info/image/2021/06/Fruits-Basket-1st-Season.jpg" alt="Fruits Basket">
+        <p>เรื่องราวของสาวที่ได้เข้ามาอาศัยอยู่ในบ้านของครอบครัวหนึ่งที่มีความลับสุดยอด พวกเขาถูกคำสาปให้แปลงร่างเป็นสัตว์จากจักรราศี และความรักก็เริ่มต้นขึ้นในความซับซ้อนของชีวิต</p>
+        <iframe src="https://www.youtube.com/embed/zFmVTrofl8k" title="Fruits Basket Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+        <h3>My Teen Romantic Comedy SNAFU (Oregairu)</h3>
+        <img src="https://i.ebayimg.com/images/g/macAAOSw3SZlUPrC/s-l1200.jpg" alt="My Teen Romantic Comedy SNAFU">
+        <p>เรื่องราวของหนุ่มคนหนึ่งที่เป็นคนไม่เข้าสังคม จึงได้รับการเชิญให้เข้าร่วมชมรมเพื่อช่วยเหลือคนอื่นในเรื่องปัญหาความสัมพันธ์</p>
+        <iframe src="https://www.youtube.com/embed/u-bpwWPNEpE" title="My Teen Romantic Comedy SNAFU Trailer"></iframe>
+    </li>
+</ul>
+<a href="anime.html" class="back-button">กลับไปหน้าแรก</a>
+</body>
+</html>

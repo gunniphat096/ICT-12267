@@ -1,0 +1,436 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animezuza</title>
+    <style>
+        body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #000;
+        margin: 0;
+        padding: 0;
+        color: white;
+        }
+
+        header {
+        background-color: #7c3aed;
+        padding: 20px 30px;
+        position: relative;
+        }
+
+        .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        }
+
+        .logo-title {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: white;
+        text-align: left;
+        flex: 1;
+        }
+
+        .topbar {
+        flex-shrink: 0;
+        margin-left: auto;
+        }
+
+        .topbar input[type="text"] {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: none;
+        font-size: 0.95em;
+        outline: none;
+        width: 250px;
+        }
+
+        .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        margin-left: 15px;
+        }
+
+        .hamburger div {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        border-radius: 2px;
+        }
+
+        nav {
+        background-color: #1f1f1f;
+        padding: 10px 0;
+        display: none;
+        }
+
+        nav.active {
+        display: block;
+        }
+
+        .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        }
+
+        .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        padding: 10px 20px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+        background-color: #7c3aed;
+        }
+
+        .categories {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        background-color: #111;
+        padding: 20px 15px;
+        }
+
+        .category {
+        background-color: #2d2d2d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 0.95em;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        }
+
+        .category:hover {
+        background-color: #7c3aed;
+        }
+
+        .anime-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 30px;
+        }
+
+        .anime-card {
+        background: #1f1f1f;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .anime-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+        }
+
+        .anime-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        }
+
+        .anime-content {
+        padding: 15px;
+        }
+
+        .anime-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #fcd34d;
+        }
+
+        .anime-description {
+        font-size: 0.95em;
+        color: #d1d5db;
+        margin: 10px 0;
+        }
+
+        .anime-button {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #7c3aed;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.9em;
+        transition: background-color 0.2s ease;
+        }
+
+        .anime-button:hover {
+        background-color: #5b21b6;
+        }
+
+        @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .topbar {
+            align-self: flex-end;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .categories {
+            display: none;
+        }
+
+        nav.active + .categories {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        }
+    </style>
+    </head>
+    <body>
+
+    <header>
+        <div class="header-content">
+        <div class="logo-title">Animezuza</div>
+        <div class="topbar">
+            <input type="text" placeholder="Search Anime">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="navbar">
+        <a href="#">Romantic</a>
+        <a href="#">Fantasy</a>
+        <a href="#">Comedy</a>
+        <a href="#">Action</a>
+        <a href="#">Adventure</a>
+        </div>
+    </nav>
+
+    <div class="categories">
+        <a class="category" href="romantic.html">Romantic</a>
+        <a class="category" href="fantasy.html">Fantasy</a>
+        <a class="category" href="comedy.html">Comedy</a>
+        <a class="category" href="action.html">Action</a>
+        <a class="category" href="adventure.html">Adventure</a>
+        <a class="category" href="sport.html">Sport</a>
+    </div>
+
+    <div class="anime-grid">
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        });
+    </script>
+
+    </body>
+    </html>
+
+
+
+    <div class="anime-grid">
+        <div class="anime-card">
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/7c1672bcbb985231df92ac310cbb162b182443f781dd4b3e66fe67b53a01f936.jpg" alt="Attack on Titan">
+        <div class="anime-content">
+            <div class="anime-title">Attack on Titan</div>
+            <div class="anime-description">Humans fight Titans in a world surrounded by walls.</div>
+            <a href="attackontitan.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Demon Slayer">
+        <div class="anime-content">
+            <div class="anime-title">Demon Slayer</div>
+            <div class="anime-description">Tanjirou hunts demons to save his sister.</div>
+            <a href="demonslayer.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+        <img src="https://www.gamesrig.com/img/index/jujutsu-kaisen-cursed-clash-cover.jpg" alt="Jujutsu Kaisen">
+        <div class="anime-content">
+            <div class="anime-title">Jujutsu Kaisen</div>
+            <div class="anime-description">Sorcerer students fight curses.</div>
+            <a href="jujutsukaisen.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://jumpg-assets.tokyo-cdn.com/secure/title/100079/title_thumbnail_portrait_list/326445.jpg?hash=G6sfqqfoMFcM4k1om8b3ow&amp;expires=2145884400" alt="One Piece">
+        <div class="anime-content">
+            <div class="anime-title">One Piece</div>
+            <div class="anime-description">The journey to find the ultimate treasure, the One Piece.</div>
+            <a href="onepiece.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2024/04/naruto-2002.jpg" alt="Naruto">
+        <div class="anime-content">
+            <div class="anime-title">Naruto</div>
+            <div class="anime-description">A young ninja strives to become the Hokage.</div>
+            <a href="naruto.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://www.veryokvinyl.com/cdn/shop/files/3cc6f6894b9cb25a2b6a06caea07bc4494562c3b.png?v=1686831979" alt="Death Note">
+        <div class="anime-content">
+            <div class="anime-title">Death Note</div>
+            <div class="anime-description">A notebook that kills anyone whose name is written in it.</div>
+            <a href="deathnote.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://m.media-amazon.com/images/M/MV5BNDczZWMyMjEtZDI0ZS00YThjLWE2MjEtNTIxNmVmZDhkNDg5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Fullmetal Alchemist">
+        <div class="anime-content">
+            <div class="anime-title">Fullmetal Alchemist</div>
+            <div class="anime-description">Two brothers search for the Philosopher's Stone to restore their bodies.</div>
+            <a href="fullmetalalchemist.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://f.ptcdn.info/074/044/000/o9qnphjyuKHAN3MsWn4-o.jpg" alt="Attack on Titan Season 2">
+        <div class="anime-content">
+            <div class="anime-title">Attack on Titan Season 2</div>
+            <div class="anime-description">The story continues with more secrets about the Titans.</div>
+            <a href="attackontitanseason2.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://www.metalbridges.com/wp-content/uploads/2016/05/My-Hero-Academia-poster.jpg" alt="My Hero Academia">
+        <div class="anime-content">
+            <div class="anime-title">My Hero Academia</div>
+            <div class="anime-description">A world where people with superpowers fight villains.</div>
+            <a href="myheroacademia.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://images-cdn.ubuy.co.id/634ec0ab9b0df8538976fb07-sword-art-online-sao-anime-poster-24in-x.jpg" alt="Sword Art Online">
+        <div class="anime-content">
+            <div class="anime-title">Sword Art Online</div>
+            <div class="anime-description">Trapped in a virtual game, players must fight to survive.</div>
+            <a href="swordartonline.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://m.media-amazon.com/images/M/MV5BZWI2NzZhMTItOTM3OS00NjcyLThmN2EtZGZjMjlhYWMwODMzXkEyXkFqcGc@._V1_.jpg" alt="Tokyo Ghoul">
+        <div class="anime-content">
+            <div class="anime-title">Tokyo Ghoul</div>
+            <div class="anime-description">A college student is transformed into a half-ghoul.</div>
+            <a href="tokyoghoul.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://preview.redd.it/jj7dicenspib1.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=13c9bfb09e311889ff039f58ce59a91ba365bdfd" alt="Bleach">
+        <div class="anime-content">
+            <div class="anime-title">Bleach</div>
+            <div class="anime-description">A teenager becomes a Soul Reaper and battles evil spirits.</div>
+            <a href="bleach.html" class="anime-button">Watch Anime</a>
+        </div>
+        </div>
+    </div>
+    
+    <div class="contact">
+        <div class="contact-heading">ติดต่อเราได้ที่</div>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://line.me" target="_blank"><i class="fab fa-line"></i> Line</a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="mailto:example@email.com"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+        hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+    <style>
+        .contact {
+        background-color: #1f1f1f;
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 500px;
+        margin: 30px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        }
+    
+        .contact-heading {
+        font-size: 1.4em;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: left;
+        padding-left: 15px;
+        border-left: 4px solid #7c3aed;
+        color: white;
+        }
+    
+        .contact a {
+        display: inline-block;
+        margin: 12px 0;
+        padding: 12px 20px;
+        color: white;
+        background-color: #333;
+        border-radius: 8px;
+        font-size: 1.1em;
+        width: 100%;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .contact a:hover {
+        background-color: #7c3aed;
+        transform: scale(1.05);
+        }
+    
+        .contact i {
+        margin-right: 10px;
+        }
+    
+        /* Add responsive design */
+        @media (max-width: 768px) {
+        .contact a {
+            font-size: 1em;
+        }
+        }
+    </style>
+    </html>

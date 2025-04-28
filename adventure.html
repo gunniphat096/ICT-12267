@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>อนิเมะผจญภัย</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+
+    body {
+      font-family: 'Cabin Sketch', cursive;
+      background: linear-gradient(to right, #e0e0d1, #d6f5d6);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1605460375648-278bcbd579a6?fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .anime-list {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .anime-item {
+      background-color: #f5f5dc;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(85, 107, 47, 0.3);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 620px;
+    }
+
+    .anime-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .anime-item h3 {
+      font-size: 26px;
+      color: #4b5320;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .anime-item p {
+      font-size: 16px;
+      color: #444;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .anime-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .anime-item iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .back-button {
+      display: block;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      width: 220px;
+      margin: 50px auto;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #388E3C;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Adventure Anime</h1>
+  </header>
+
+  <ul class="anime-list">
+    <li class="anime-item">
+      <h3>Made in Abyss</h3>
+      <img src="https://cdn.myanimelist.net/images/anime/6/86733.jpg" alt="Made in Abyss">
+      <p>เรื่องราวของเด็กสาวผู้มุ่งหน้าสู่ก้นเหวลึกลับที่เต็มไปด้วยสิ่งมีชีวิตและความลับที่ท้าทายการสำรวจ</p>
+      <iframe src="https://www.youtube.com/embed/kqBNQEUI8dM" title="Made in Abyss Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+      <h3>Hunter x Hunter</h3>
+      <img src="https://cdn.myanimelist.net/images/anime/1337/99013.jpg" alt="Hunter x Hunter">
+      <p>กอน ออกเดินทางตามหาพ่อและกลายเป็นฮันเตอร์ เพื่อผจญภัยในโลกอันกว้างใหญ่และเต็มไปด้วยอันตราย</p>
+      <iframe src="https://www.youtube.com/embed/d6kBeJjTGnY" title="Hunter x Hunter Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+      <h3>One Piece</h3>
+      <img src="https://cdn.myanimelist.net/images/anime/6/73245.jpg" alt="One Piece">
+      <p>การเดินทางของลูฟี่และผองเพื่อนโจรสลัดเพื่อค้นหา One Piece สมบัติในตำนานบนโลกอันกว้างใหญ่</p>
+      <iframe src="https://www.youtube.com/embed/S8_YwFLCh4U" title="One Piece Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+      <h3>Nausicaä of the Valley of the Wind</h3>
+      <img src="https://m.media-amazon.com/images/M/MV5BODBhMTI3YzMtNTRjYS00OTFkLWJmODUtNjJiNzcwYTVkNDhiXkEyXkFqcGc@._V1_.jpg" alt="Nausicaa">
+      <p>เจ้าหญิงนักผจญภัยในโลกหลังภัยพิบัติที่ต่อสู้เพื่อความสงบสุขของธรรมชาติและมนุษย์</p>
+      <iframe src="https://www.youtube.com/embed/6zhLBe319KE" title="Nausicaä Trailer"></iframe>
+    </li>
+    <li class="anime-item">
+      <h3>Pokémon</h3>
+      <img src="https://cdn.myanimelist.net/images/anime/5/87048.jpg" alt="Pokemon">
+      <p>ซาโตชิและปิกาจูเดินทางไปทั่วโลกเพื่อเป็นโปเกมอนมาสเตอร์ เผชิญหน้าการแข่งขันและมิตรภาพ</p>
+      <iframe src="https://www.youtube.com/embed/JuYeHPFR3f0" title="Pokemon Trailer"></iframe>
+    </li>
+  </ul>
+
+  <a href="anime.html" class="back-button">กลับไปหน้าแรก</a>
+</body>
+</html>
+
